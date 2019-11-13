@@ -2,25 +2,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './assets/pages/Home/App';
-
 // importou a pagina Categorias
 import Categoria from './assets/pages/Categoria/Categoria';
 import * as serviceWorker from './serviceWorker';
-
+import Login from './assets/pages/Login/Login';
+import Evento from './assets/pages/Evento/Evento';
 import Notfound from './assets/pages/Notfound/Notfound';
-
 // importou a biblioteca react-router-dom
-import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 // realizar a criaçao das rotas
 const Rotas = (
     <Router>
         <div>
             <Switch>
-            <Route exact path="/" component={App} />
-            <Route path="/Categoria" component={Categoria} />
-            <Route componet = {Notfound}/>
+                <Route exact path="/" component={App} />
+                <Route path="/Categoria" component={Categoria} />
+                <Route path="/Evento" component={Evento} />
+                <Route path="/Login" component={Login} />
+                <Route component={Notfound} />
             </Switch>
         </div>
     </Router>
